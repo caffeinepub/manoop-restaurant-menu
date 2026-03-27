@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* MANOOP Dark Theme — always dark */
+    --background: 0.085 0 0;
+    --foreground: 0.985 0 0;
+    --card: 0.13 0 0;
+    --card-foreground: 0.985 0 0;
+    --popover: 0.16 0 0;
+    --popover-foreground: 0.985 0 0;
+    --primary: 0.87 0.17 89;
+    --primary-foreground: 0.085 0 0;
+    --secondary: 0.18 0 0;
+    --secondary-foreground: 0.985 0 0;
+    --muted: 0.18 0 0;
+    --muted-foreground: 0.72 0.003 280;
+    --accent: 0.56 0.25 355;
+    --accent-foreground: 0.985 0 0;
+    --destructive: 0.53 0.2 27;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.22 0 0;
+    --input: 0.18 0 0;
+    --ring: 0.87 0.17 89;
+    --chart-1: 0.87 0.17 89;
+    --chart-2: 0.56 0.25 355;
+    --chart-3: 0.75 0.17 155;
+    --chart-4: 0.53 0.2 27;
+    --chart-5: 0.72 0.003 280;
+    --sidebar: 0.13 0 0;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.87 0.17 89;
+    --sidebar-primary-foreground: 0.085 0 0;
+    --sidebar-accent: 0.18 0 0;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.87 0.17 89;
+    /* Custom semantic tokens */
+    --yellow: 0.87 0.17 89;
+    --magenta: 0.56 0.25 355;
+    --veg-green: 0.75 0.17 155;
+    --nonveg-red: 0.53 0.2 27;
+    --surface: 0.16 0 0;
+    --input-bg: 0.18 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hide scrollbar for category tabs */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 0 0 rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.045);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 0 6px
+      rgba(255, 255, 255, 0.08);
+  }
+}
+
+.google-review-btn {
+  animation: floatPulse 2s ease-in-out infinite;
+}
